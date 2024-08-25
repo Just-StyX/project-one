@@ -1,0 +1,24 @@
+<div class="container-fluid card login-container">
+    <h3 class="text-center">Add Product</h3>
+    <hr>
+    <div class="alert alert-danger" role="alert" *ngIf="errorMessages.length">
+      <p *ngFor="let msg of errorMessages">{{msg}}</p>
+    </div>
+    <div class="mb-3">
+      <label for="productName" class="form-label">Product Name</label>
+      <input [(ngModel)]="productRequest.productName"  type="text" class="form-control" id="productName" placeholder="black clippers">
+    </div>
+    <div class="mb-3">
+      <label for="productType" class="form-label">Product Type</label>
+      <input [(ngModel)]="productRequest.productType" type="text" class="form-control" id="productType" placeholder="shoes">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input [(ngModel)]="productRequest.price" type="number" class="form-control" id="price" placeholder="0.00">
+    </div>
+    <div class="mb-3">
+        <label for="size" class="form-label">Size</label>
+        <input [(ngModel)]="productRequest.size" type="number" class="form-control" id="size" placeholder="0.00">
+    </div>
+    <button class="btn btn-primary" type="button" (click)="addItem()">Add Item</button>
+</div>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="javascript:void(0)" (click)="homePage()">Jsl-G</a>
+  
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="javascript:void(0)" (click)="productPage()"> Products </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="addProduct()"> Add Product </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" (click)="pricingPage()"> Pricing</a>
+        </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0 d-flex gap-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #searchValue>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="searProductByValue(searchValue)">Search</button>
+      </form>
+    </div>
+  </nav>
